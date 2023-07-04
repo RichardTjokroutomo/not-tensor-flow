@@ -40,7 +40,7 @@ print("begin training")
 print("======================================================================================")
 print("")
 # model
-optimizers.SGD(my_model, input_train, output_train, 30, 10, 1, True, input_test, output_test)  # lr = 1 is optimal for se
+optimizers.SGD(my_model, input_train, output_train, 30, 10, 3, True, input_test, output_test)  # lr = 1 is optimal for se
 print("======================================================================================")
 print("training finished")
 
