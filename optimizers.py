@@ -56,7 +56,7 @@ def SGD(model, input_train, output_train, epoch, batch_size, learning_rate, test
                     activation = layer.feedforward(activation)
                 
                 # backprop
-                delta = loss_func.se(activation, y)   # WE ARE CURRENTLY USING SE
+                delta = loss_func.binary_cross_entropy_prime(activation, y)   # WE ARE CURRENTLY USING SE
                 for j in range(model_size-1, 0, -1):
                     cur_layer = model[j]
                     if cur_layer.contains_tunable_params():
